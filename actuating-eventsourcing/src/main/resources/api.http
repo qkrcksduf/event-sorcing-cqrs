@@ -1,0 +1,40 @@
+POST http://localhost:9020/event-actuatings/result
+Content-Type: application/json
+
+{
+  "actuatingId" : "7bd490f8-e0a9-4a84-a7ac-030429ecb1ae",
+  "actuatorId": "32e9f406-9683-4fec-bd11-26fff689234a",
+  "actuatorName" : "서보모터 A",
+  "actuatingValue": "START",
+  "actuatingResult": "SUCCESS"
+}
+
+###
+POST http://localhost:9020/event-actuatings/result
+Content-Type: application/json
+
+{
+  "actuatingId" : "7bd490f8-e0f9-4a84-a9ac-030429ecb9ed",
+  "actuatorId": "32e9f406-9683-4fec-bd11-26fff689234e",
+  "actuatorName" : "서보모터 A",
+  "actuatingValue": "START",
+  "actuatingResult": "FAIL",
+  "description" : "디바이스에 문제가 있어서 제어 실패"
+}
+
+###
+POST http://localhost:8000/api/v1/event-actuatings/result
+Content-Type: application/json
+
+{
+  "actuatingId" : "7bd490f8-e0f9-4a84-a9ac-030429ecb9ad",
+  "actuatorId": "8425a61e-f318-4d41-baf0-0a9c068b7d5f",
+  "actuatorName" : "서보모터 A",
+  "actuatingValue": "START",
+  "actuatingResult": "FAIL",
+  "description" : "디바이스에 문제가 있어서 제어 실패"
+}
+
+###
+GET http://localhost:9020/event-actuatings/test
+Content-Type: application/json
